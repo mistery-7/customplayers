@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>player_barra_inferior1</title>
+  <style>html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; }</style>
+
+  <!-- Tema opcional: sobrescreve as cores padrão do player_barra_inferior1.js -->
+  <script>
+    window.PLAYER_THEME = {
+      // "theme-color": "#c4a65e",
+      // "toolbar": "#111111"
+    };
+  </script>
+  <script src="player_barra_inferior1.js"></script>
+</head>
+<body>
+  <div id="playerjs" style="width:100%;height:100%;"></div>
+
+  <script>
+    // Lê as opções da URL: player_barra_inferior1.html?file=URL_DO_VIDEO&title=Título&poster=capa.jpg
+    var vs = { id: "playerjs" };
+    new URLSearchParams(location.search).forEach(function (value, key) { vs[key] = value; });
+    var playerjs = new Playerjs(vs);
+  </script>
+</body>
+</html>
